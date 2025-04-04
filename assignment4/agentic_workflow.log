@@ -1,0 +1,165 @@
+2025-04-04 19:42:43,022 - INFO - Starting main execution...
+2025-04-04 19:42:43,022 - INFO - Establishing connection to MCP server...
+2025-04-04 19:42:43,046 - INFO - Connection established, creating session...
+2025-04-04 19:42:43,046 - INFO - Session created, initializing...
+2025-04-04 19:42:47,000 - INFO - Requesting tool list...
+2025-04-04 19:42:47,021 - INFO - Successfully retrieved 6 tools
+2025-04-04 19:42:47,021 - INFO - Creating system prompt...
+2025-04-04 19:42:47,021 - INFO - Number of tools: 6
+2025-04-04 19:42:47,021 - INFO - Added description for tool: 1. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-04 19:42:47,021 - INFO - Added description for tool: 2. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-04 19:42:47,022 - INFO - Added description for tool: 3. open_paint() - Opens Microsoft Paint, maximizes it, and resets the canvas.
+2025-04-04 19:42:47,022 - INFO - Added description for tool: 4. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).
+2025-04-04 19:42:47,022 - INFO - Added description for tool: 5. add_text_in_paint(text: string) - Adds the specified text to the canvas in Microsoft Paint.
+2025-04-04 19:42:47,022 - INFO - Added description for tool: 6. send_email(to_email: string, subject: string, body: string) - Send an email via Gmail's SMTP server.
+2025-04-04 19:42:47,022 - INFO - Successfully created tools description
+2025-04-04 19:42:47,022 - INFO - Created system prompt...
+2025-04-04 19:42:47,022 - INFO - 1. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+3. open_paint() - Opens Microsoft Paint, maximizes it, and resets the canvas.
+4. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).
+5. add_text_in_paint(text: string) - Adds the specified text to the canvas in Microsoft Paint.
+6. send_email(to_email: string, subject: string, body: string) - Send an email via Gmail's SMTP server.
+2025-04-04 19:42:47,022 - INFO - Starting iteration loop...
+2025-04-04 19:42:47,022 - INFO - 
+--- Iteration 1 ---
+2025-04-04 19:42:47,023 - INFO - Preparing to generate LLM response...
+2025-04-04 19:42:47,023 - INFO - Starting LLM generation...
+2025-04-04 19:42:47,030 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:42:47,857 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:42:47,860 - INFO - AFC remote call 1 is done.
+2025-04-04 19:42:47,861 - INFO - LLM generation completed
+2025-04-04 19:42:47,861 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|BHARAT
+2025-04-04 19:42:47,862 - INFO - 
+DEBUG: Raw function info:  strings_to_chars_to_int|BHARAT
+2025-04-04 19:42:47,862 - INFO - DEBUG: Split parts: ['strings_to_chars_to_int', 'BHARAT']
+2025-04-04 19:42:47,862 - INFO - DEBUG: Function name: strings_to_chars_to_int
+2025-04-04 19:42:47,862 - INFO - DEBUG: Raw parameters: ['BHARAT']
+2025-04-04 19:42:47,863 - INFO - DEBUG: Found tool: strings_to_chars_to_int
+2025-04-04 19:42:47,863 - INFO - DEBUG: Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-04 19:42:47,863 - INFO - DEBUG: Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-04 19:42:47,863 - INFO - DEBUG: Converting parameter string with value BHARAT to type string
+2025-04-04 19:42:47,863 - INFO - DEBUG: Final arguments: {'string': 'BHARAT'}
+2025-04-04 19:42:47,863 - INFO - DEBUG: Calling tool strings_to_chars_to_int
+2025-04-04 19:42:47,875 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='66', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='82', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None)] isError=False
+2025-04-04 19:42:47,876 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:42:47,876 - INFO - DEBUG: Final iteration result: ['66', '72', '65', '82', '65', '84']
+2025-04-04 19:42:47,876 - INFO - 
+--- Iteration 2 ---
+2025-04-04 19:42:47,876 - INFO - Preparing to generate LLM response...
+2025-04-04 19:42:47,877 - INFO - Starting LLM generation...
+2025-04-04 19:42:47,877 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:42:49,238 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:42:49,241 - INFO - AFC remote call 1 is done.
+2025-04-04 19:42:49,242 - INFO - LLM generation completed
+2025-04-04 19:42:49,242 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[66, 72, 65, 82, 65, 84]
+2025-04-04 19:42:49,242 - INFO - 
+DEBUG: Raw function info:  int_list_to_exponential_sum|[66, 72, 65, 82, 65, 84]
+2025-04-04 19:42:49,243 - INFO - DEBUG: Split parts: ['int_list_to_exponential_sum', '[66, 72, 65, 82, 65, 84]']
+2025-04-04 19:42:49,243 - INFO - DEBUG: Function name: int_list_to_exponential_sum
+2025-04-04 19:42:49,243 - INFO - DEBUG: Raw parameters: ['[66, 72, 65, 82, 65, 84]']
+2025-04-04 19:42:49,243 - INFO - DEBUG: Found tool: int_list_to_exponential_sum
+2025-04-04 19:42:49,243 - INFO - DEBUG: Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-04 19:42:49,244 - INFO - DEBUG: Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-04 19:42:49,244 - INFO - DEBUG: Converting parameter int_list with value [66, 72, 65, 82, 65, 84] to type array
+2025-04-04 19:42:49,244 - INFO - DEBUG: Final arguments: {'int_list': [66, 72, 65, 82, 65, 84]}
+2025-04-04 19:42:49,244 - INFO - DEBUG: Calling tool int_list_to_exponential_sum
+2025-04-04 19:42:49,253 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='3.4344956851009924e+36', annotations=None)] isError=False
+2025-04-04 19:42:49,254 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:42:49,254 - INFO - DEBUG: Final iteration result: ['3.4344956851009924e+36']
+2025-04-04 19:42:49,254 - INFO - 
+--- Iteration 3 ---
+2025-04-04 19:42:49,254 - INFO - Preparing to generate LLM response...
+2025-04-04 19:42:49,254 - INFO - Starting LLM generation...
+2025-04-04 19:42:49,255 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:42:49,883 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:42:49,885 - INFO - AFC remote call 1 is done.
+2025-04-04 19:42:49,886 - INFO - LLM generation completed
+2025-04-04 19:42:49,886 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-04 19:42:49,886 - INFO - 
+DEBUG: Raw function info:  open_paint
+2025-04-04 19:42:49,886 - INFO - DEBUG: Split parts: ['open_paint']
+2025-04-04 19:42:49,887 - INFO - DEBUG: Function name: open_paint
+2025-04-04 19:42:49,887 - INFO - DEBUG: Raw parameters: []
+2025-04-04 19:42:49,887 - INFO - DEBUG: Found tool: open_paint
+2025-04-04 19:42:49,887 - INFO - DEBUG: Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-04 19:42:49,887 - INFO - DEBUG: Schema properties: {}
+2025-04-04 19:42:49,887 - INFO - DEBUG: Final arguments: {}
+2025-04-04 19:42:49,888 - INFO - DEBUG: Calling tool open_paint
+2025-04-04 19:42:53,777 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Microsoft Paint has been successfully launched, brought to focus, and the canvas has been reset.", "annotations": null}]}', annotations=None)] isError=False
+2025-04-04 19:42:53,778 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:42:53,778 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Microsoft Paint has been successfully launched, brought to focus, and the canvas has been reset.", "annotations": null}]}']
+2025-04-04 19:42:53,778 - INFO - 
+--- Iteration 4 ---
+2025-04-04 19:42:53,779 - INFO - Preparing to generate LLM response...
+2025-04-04 19:42:53,779 - INFO - Starting LLM generation...
+2025-04-04 19:42:53,779 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:42:54,834 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:42:54,837 - INFO - AFC remote call 1 is done.
+2025-04-04 19:42:54,838 - INFO - LLM generation completed
+2025-04-04 19:42:54,838 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|200|200|500|400
+2025-04-04 19:42:54,838 - INFO - 
+DEBUG: Raw function info:  draw_rectangle|200|200|500|400
+2025-04-04 19:42:54,838 - INFO - DEBUG: Split parts: ['draw_rectangle', '200', '200', '500', '400']
+2025-04-04 19:42:54,839 - INFO - DEBUG: Function name: draw_rectangle
+2025-04-04 19:42:54,839 - INFO - DEBUG: Raw parameters: ['200', '200', '500', '400']
+2025-04-04 19:42:54,839 - INFO - DEBUG: Found tool: draw_rectangle
+2025-04-04 19:42:54,839 - INFO - DEBUG: Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-04 19:42:54,839 - INFO - DEBUG: Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-04 19:42:54,840 - INFO - DEBUG: Converting parameter x1 with value 200 to type integer
+2025-04-04 19:42:54,840 - INFO - DEBUG: Converting parameter y1 with value 200 to type integer
+2025-04-04 19:42:54,840 - INFO - DEBUG: Converting parameter x2 with value 500 to type integer
+2025-04-04 19:42:54,840 - INFO - DEBUG: Converting parameter y2 with value 400 to type integer
+2025-04-04 19:42:54,840 - INFO - DEBUG: Final arguments: {'x1': 200, 'y1': 200, 'x2': 500, 'y2': 400}
+2025-04-04 19:42:54,841 - INFO - DEBUG: Calling tool draw_rectangle
+2025-04-04 19:42:55,891 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "A rectangle has been successfully drawn from (200, 200) to (500, 400).", "annotations": null}]}', annotations=None)] isError=False
+2025-04-04 19:42:55,891 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:42:55,892 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "A rectangle has been successfully drawn from (200, 200) to (500, 400).", "annotations": null}]}']
+2025-04-04 19:42:55,892 - INFO - 
+--- Iteration 5 ---
+2025-04-04 19:42:55,892 - INFO - Preparing to generate LLM response...
+2025-04-04 19:42:55,892 - INFO - Starting LLM generation...
+2025-04-04 19:42:55,893 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:42:56,625 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:42:56,630 - INFO - AFC remote call 1 is done.
+2025-04-04 19:42:56,630 - INFO - LLM generation completed
+2025-04-04 19:42:56,631 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|Final Answer-:- 3.4344956851009924e+36
+2025-04-04 19:42:56,631 - INFO - 
+DEBUG: Raw function info:  add_text_in_paint|Final Answer-:- 3.4344956851009924e+36
+2025-04-04 19:42:56,631 - INFO - DEBUG: Split parts: ['add_text_in_paint', 'Final Answer-:- 3.4344956851009924e+36']
+2025-04-04 19:42:56,631 - INFO - DEBUG: Function name: add_text_in_paint
+2025-04-04 19:42:56,631 - INFO - DEBUG: Raw parameters: ['Final Answer-:- 3.4344956851009924e+36']
+2025-04-04 19:42:56,632 - INFO - DEBUG: Found tool: add_text_in_paint
+2025-04-04 19:42:56,632 - INFO - DEBUG: Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}}, 'required': ['text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-04 19:42:56,632 - INFO - DEBUG: Schema properties: {'text': {'title': 'Text', 'type': 'string'}}
+2025-04-04 19:42:56,632 - INFO - DEBUG: Converting parameter text with value Final Answer-:- 3.4344956851009924e+36 to type string
+2025-04-04 19:42:56,632 - INFO - DEBUG: Final arguments: {'text': 'Final Answer-:- 3.4344956851009924e+36'}
+2025-04-04 19:42:56,632 - INFO - DEBUG: Calling tool add_text_in_paint
+2025-04-04 19:43:01,441 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "The text \'Final Answer-:- 3.4344956851009924e+36\' has been successfully added to the canvas.", "annotations": null}]}', annotations=None)] isError=False
+2025-04-04 19:43:01,441 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:43:01,441 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "The text \'Final Answer-:- 3.4344956851009924e+36\' has been successfully added to the canvas.", "annotations": null}]}']
+2025-04-04 19:43:01,441 - INFO - 
+--- Iteration 6 ---
+2025-04-04 19:43:01,441 - INFO - Preparing to generate LLM response...
+2025-04-04 19:43:01,442 - INFO - Starting LLM generation...
+2025-04-04 19:43:01,442 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-04 19:43:02,337 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-04 19:43:02,341 - INFO - AFC remote call 1 is done.
+2025-04-04 19:43:02,341 - INFO - LLM generation completed
+2025-04-04 19:43:02,342 - INFO - LLM Response: FUNCTION_CALL: send_email|bhole.atul@gmail.com|Sum of Exponentials|3.4344956851009924e+36
+2025-04-04 19:43:02,342 - INFO - 
+DEBUG: Raw function info:  send_email|bhole.atul@gmail.com|Sum of Exponentials|3.4344956851009924e+36
+2025-04-04 19:43:02,342 - INFO - DEBUG: Split parts: ['send_email', 'bhole.atul@gmail.com', 'Sum of Exponentials', '3.4344956851009924e+36']
+2025-04-04 19:43:02,342 - INFO - DEBUG: Function name: send_email
+2025-04-04 19:43:02,342 - INFO - DEBUG: Raw parameters: ['bhole.atul@gmail.com', 'Sum of Exponentials', '3.4344956851009924e+36']
+2025-04-04 19:43:02,342 - INFO - DEBUG: Found tool: send_email
+2025-04-04 19:43:02,342 - INFO - DEBUG: Tool schema: {'properties': {'to_email': {'title': 'To Email', 'type': 'string'}, 'subject': {'title': 'Subject', 'type': 'string'}, 'body': {'title': 'Body', 'type': 'string'}}, 'required': ['to_email', 'subject', 'body'], 'title': 'send_emailArguments', 'type': 'object'}
+2025-04-04 19:43:02,342 - INFO - DEBUG: Schema properties: {'to_email': {'title': 'To Email', 'type': 'string'}, 'subject': {'title': 'Subject', 'type': 'string'}, 'body': {'title': 'Body', 'type': 'string'}}
+2025-04-04 19:43:02,342 - INFO - DEBUG: Converting parameter to_email with value bhole.atul@gmail.com to type string
+2025-04-04 19:43:02,342 - INFO - DEBUG: Converting parameter subject with value Sum of Exponentials to type string
+2025-04-04 19:43:02,343 - INFO - DEBUG: Converting parameter body with value 3.4344956851009924e+36 to type string
+2025-04-04 19:43:02,343 - INFO - DEBUG: Final arguments: {'to_email': 'bhole.atul@gmail.com', 'subject': 'Sum of Exponentials', 'body': '3.4344956851009924e+36'}
+2025-04-04 19:43:02,343 - INFO - DEBUG: Calling tool send_email
+2025-04-04 19:43:05,180 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Email sent successfully to bhole.atul@gmail.com", "annotations": null}]}', annotations=None)] isError=False
+2025-04-04 19:43:05,180 - INFO - DEBUG: Result has content attribute
+2025-04-04 19:43:05,180 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Email sent successfully to bhole.atul@gmail.com", "annotations": null}]}']
