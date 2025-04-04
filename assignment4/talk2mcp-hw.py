@@ -22,7 +22,7 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
-max_iterations = 6
+max_iterations = 7
 last_response = None
 iteration = 0
 iteration_response = []
