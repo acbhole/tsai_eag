@@ -1,0 +1,578 @@
+2025-04-13 16:09:10,673 - DEBUG - Using proactor: IocpProactor
+2025-04-13 16:09:10,677 - INFO - Starting main execution...
+2025-04-13 16:09:10,678 - INFO - Establishing connection to MCP server...
+2025-04-13 16:09:10,722 - INFO - Connection established, creating session...
+2025-04-13 16:09:10,722 - INFO - Session created, initializing...
+2025-04-13 16:09:14,496 - INFO - Requesting tool list...
+2025-04-13 16:09:14,511 - INFO - Successfully retrieved 9 tools
+2025-04-13 16:09:14,511 - INFO - Creating system prompt...
+2025-04-13 16:09:14,511 - INFO - Number of tools: 9
+2025-04-13 16:09:14,511 - INFO - -----------
+
+Processing tool --> 0: strings_to_chars_to_int : Return the ASCII values of the characters in a word.
+2025-04-13 16:09:14,511 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "strings_to_chars_to_int",
+        "description": "Return the ASCII values of the characters in a word.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "string": {
+                    "type": "string",
+                    "description": "The input string to convert to ASCII values.",
+                    "title": "String"
+                }
+            },
+            "required": [
+                "string"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,511 - INFO - -----------
+
+Processing tool --> 1: int_list_to_exponential_sum : Return sum of exponentials of numbers in a list.
+2025-04-13 16:09:14,512 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "int_list_to_exponential_sum",
+        "description": "Return sum of exponentials of numbers in a list.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "int_list": {
+                    "type": "array",
+                    "description": "A list of integers to calculate the sum of exponentials.",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "title": "Int List"
+                }
+            },
+            "required": [
+                "int_list"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,512 - INFO - -----------
+
+Processing tool --> 2: open_paint : Opens Microsoft Paint, maximizes it, and resets the canvas.
+2025-04-13 16:09:14,512 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "open_paint",
+        "description": "Opens Microsoft Paint, maximizes it, and resets the canvas.",
+        "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        }
+    }
+}
+2025-04-13 16:09:14,512 - INFO - -----------
+
+Processing tool --> 3: draw_rectangle : Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).
+2025-04-13 16:09:14,512 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "draw_rectangle",
+        "description": "Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "x1": {
+                    "type": "integer",
+                    "description": "The x-coordinate of the starting point.",
+                    "title": "X1"
+                },
+                "y1": {
+                    "type": "integer",
+                    "description": "The y-coordinate of the starting point.",
+                    "title": "Y1"
+                },
+                "x2": {
+                    "type": "integer",
+                    "description": "The x-coordinate of the ending point.",
+                    "title": "X2"
+                },
+                "y2": {
+                    "type": "integer",
+                    "description": "The y-coordinate of the ending point.",
+                    "title": "Y2"
+                }
+            },
+            "required": [
+                "x1",
+                "y1",
+                "x2",
+                "y2"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,512 - INFO - -----------
+
+Processing tool --> 4: add_text_in_paint : Adds the specified text to the canvas in Microsoft Paint.
+2025-04-13 16:09:14,512 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "add_text_in_paint",
+        "description": "Adds the specified text to the canvas in Microsoft Paint.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "description": "The text to be added to the canvas.",
+                    "title": "Text"
+                }
+            },
+            "required": [
+                "text"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,513 - INFO - -----------
+
+Processing tool --> 5: send_email : Send an email via Gmail's SMTP server.
+2025-04-13 16:09:14,513 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "send_email",
+        "description": "Send an email via Gmail's SMTP server.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "to_email": {
+                    "type": "string",
+                    "description": "The recipient email address.",
+                    "title": "To Email"
+                },
+                "subject": {
+                    "type": "string",
+                    "description": "The subject of the email.",
+                    "title": "Subject"
+                },
+                "body": {
+                    "type": "string",
+                    "description": "The content of the email.",
+                    "title": "Body"
+                }
+            },
+            "required": [
+                "to_email",
+                "subject",
+                "body"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,513 - INFO - -----------
+
+Processing tool --> 6: find_first_fibonacci_numbers : Generate the first n Fibonacci numbers.
+2025-04-13 16:09:14,513 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "find_first_fibonacci_numbers",
+        "description": "Generate the first n Fibonacci numbers.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "n": {
+                    "type": "integer",
+                    "description": "The number of Fibonacci numbers to generate.",
+                    "title": "N"
+                }
+            },
+            "required": [
+                "n"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,513 - INFO - -----------
+
+Processing tool --> 7: calculate_cubes : Calculate the cubes of a list of numbers.
+2025-04-13 16:09:14,513 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "calculate_cubes",
+        "description": "Calculate the cubes of a list of numbers.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "numbers": {
+                    "type": "array",
+                    "description": "The list of numbers to calculate cubes for.",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "title": "Numbers"
+                }
+            },
+            "required": [
+                "numbers"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,513 - INFO - -----------
+
+Processing tool --> 8: calculate_sum : Calculate the sum of a list of numbers.
+2025-04-13 16:09:14,513 - INFO - TOOL_DESCRIPTION:
+{
+    "type": "function",
+    "function": {
+        "name": "calculate_sum",
+        "description": "Calculate the sum of a list of numbers.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "numbers": {
+                    "type": "array",
+                    "description": "The list of numbers to calculate the sum for.",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "title": "Numbers"
+                }
+            },
+            "required": [
+                "numbers"
+            ]
+        }
+    }
+}
+2025-04-13 16:09:14,516 - INFO - Created system prompt...
+2025-04-13 16:09:14,516 - INFO - ['{"type":"function","function":{"name":"strings_to_chars_to_int","description":"Return the ASCII values of the characters in a word.","parameters":{"type":"object","properties":{"string":{"type":"string","description":"The input string to convert to ASCII values.","title":"String"}},"required":["string"]}}}', '{"type":"function","function":{"name":"int_list_to_exponential_sum","description":"Return sum of exponentials of numbers in a list.","parameters":{"type":"object","properties":{"int_list":{"type":"array","description":"A list of integers to calculate the sum of exponentials.","items":{"type":"integer"},"title":"Int List"}},"required":["int_list"]}}}', '{"type":"function","function":{"name":"open_paint","description":"Opens Microsoft Paint, maximizes it, and resets the canvas.","parameters":{"type":"object","properties":{},"required":[]}}}', '{"type":"function","function":{"name":"draw_rectangle","description":"Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).","parameters":{"type":"object","properties":{"x1":{"type":"integer","description":"The x-coordinate of the starting point.","title":"X1"},"y1":{"type":"integer","description":"The y-coordinate of the starting point.","title":"Y1"},"x2":{"type":"integer","description":"The x-coordinate of the ending point.","title":"X2"},"y2":{"type":"integer","description":"The y-coordinate of the ending point.","title":"Y2"}},"required":["x1","y1","x2","y2"]}}}', '{"type":"function","function":{"name":"add_text_in_paint","description":"Adds the specified text to the canvas in Microsoft Paint.","parameters":{"type":"object","properties":{"text":{"type":"string","description":"The text to be added to the canvas.","title":"Text"}},"required":["text"]}}}', '{"type":"function","function":{"name":"send_email","description":"Send an email via Gmail\'s SMTP server.","parameters":{"type":"object","properties":{"to_email":{"type":"string","description":"The recipient email address.","title":"To Email"},"subject":{"type":"string","description":"The subject of the email.","title":"Subject"},"body":{"type":"string","description":"The content of the email.","title":"Body"}},"required":["to_email","subject","body"]}}}', '{"type":"function","function":{"name":"find_first_fibonacci_numbers","description":"Generate the first n Fibonacci numbers.","parameters":{"type":"object","properties":{"n":{"type":"integer","description":"The number of Fibonacci numbers to generate.","title":"N"}},"required":["n"]}}}', '{"type":"function","function":{"name":"calculate_cubes","description":"Calculate the cubes of a list of numbers.","parameters":{"type":"object","properties":{"numbers":{"type":"array","description":"The list of numbers to calculate cubes for.","items":{"type":"integer"},"title":"Numbers"}},"required":["numbers"]}}}', '{"type":"function","function":{"name":"calculate_sum","description":"Calculate the sum of a list of numbers.","parameters":{"type":"object","properties":{"numbers":{"type":"array","description":"The list of numbers to calculate the sum for.","items":{"type":"integer"},"title":"Numbers"}},"required":["numbers"]}}}']
+2025-04-13 16:09:14,516 - INFO - System prompt: You are an AI agent that solves tasks iteratively using tools. You must reason step-by-step, store intermediate results as needed, and issue one tool command at a time using the strict formats below. You should **verify intermediate results**, handle tool errors, and internally track the **type of reasoning** being used (e.g., arithmetic, lookup, planning).
+---
+\u2705 Available Tools:
+['{"type":"function","function":{"name":"strings_to_chars_to_int","description":"Return the ASCII values of the characters in a word.","parameters":{"type":"object","properties":{"string":{"type":"string","description":"The input string to convert to ASCII values.","title":"String"}},"required":["string"]}}}', '{"type":"function","function":{"name":"int_list_to_exponential_sum","description":"Return sum of exponentials of numbers in a list.","parameters":{"type":"object","properties":{"int_list":{"type":"array","description":"A list of integers to calculate the sum of exponentials.","items":{"type":"integer"},"title":"Int List"}},"required":["int_list"]}}}', '{"type":"function","function":{"name":"open_paint","description":"Opens Microsoft Paint, maximizes it, and resets the canvas.","parameters":{"type":"object","properties":{},"required":[]}}}', '{"type":"function","function":{"name":"draw_rectangle","description":"Draws a rectangle in Microsoft Paint from (x1, y1) to (x2, y2).","parameters":{"type":"object","properties":{"x1":{"type":"integer","description":"The x-coordinate of the starting point.","title":"X1"},"y1":{"type":"integer","description":"The y-coordinate of the starting point.","title":"Y1"},"x2":{"type":"integer","description":"The x-coordinate of the ending point.","title":"X2"},"y2":{"type":"integer","description":"The y-coordinate of the ending point.","title":"Y2"}},"required":["x1","y1","x2","y2"]}}}', '{"type":"function","function":{"name":"add_text_in_paint","description":"Adds the specified text to the canvas in Microsoft Paint.","parameters":{"type":"object","properties":{"text":{"type":"string","description":"The text to be added to the canvas.","title":"Text"}},"required":["text"]}}}', '{"type":"function","function":{"name":"send_email","description":"Send an email via Gmail\'s SMTP server.","parameters":{"type":"object","properties":{"to_email":{"type":"string","description":"The recipient email address.","title":"To Email"},"subject":{"type":"string","description":"The subject of the email.","title":"Subject"},"body":{"type":"string","description":"The content of the email.","title":"Body"}},"required":["to_email","subject","body"]}}}', '{"type":"function","function":{"name":"find_first_fibonacci_numbers","description":"Generate the first n Fibonacci numbers.","parameters":{"type":"object","properties":{"n":{"type":"integer","description":"The number of Fibonacci numbers to generate.","title":"N"}},"required":["n"]}}}', '{"type":"function","function":{"name":"calculate_cubes","description":"Calculate the cubes of a list of numbers.","parameters":{"type":"object","properties":{"numbers":{"type":"array","description":"The list of numbers to calculate cubes for.","items":{"type":"integer"},"title":"Numbers"}},"required":["numbers"]}}}', '{"type":"function","function":{"name":"calculate_sum","description":"Calculate the sum of a list of numbers.","parameters":{"type":"object","properties":{"numbers":{"type":"array","description":"The list of numbers to calculate the sum for.","items":{"type":"integer"},"title":"Numbers"}},"required":["numbers"]}}}']
+---
+\u2705 Output Rules:
+
+- You MUST respond with **exactly one line** starting with either `FUNCTION_CALL:` or `FINAL_ANSWER:`.
+- Use this format for function calls:  
+  `FUNCTION_CALL: {"tool_name": "function_name", "tool_input":{ "<parameter_name>": "<parameter_value>", ... }}`
+- Use this format for final output:  
+  `FINAL_ANSWER: [number]`
+- Do NOT repeat function calls with the same parameters.
+- If a function result is reused later, store it in a variable internally (e.g., result1 = [values]).
+- Internally track the **reasoning type** for each step: [lookup, arithmetic, planning, tool-use, validation, communication].
+
+---
+
+\u2705 Error Handling:
+
+- If a tool returns an unexpected result (e.g., empty list, null), retry once if logical.
+- If retry fails or is not applicable, skip the step and continue.
+- Use placeholder messages (e.g., "Unable to compute") in later steps if data is missing.
+- Always aim to complete the task using available tools, even with partial success.
+
+---
+
+\u2705 Reasoning Instructions:
+
+- Think before you act. Always verify intermediate steps logically.
+- Separate reasoning from tool use: reason internally, then call a tool.
+- Always process and store tool outputs for future use.
+- Do not guess values—rely on tool outputs.
+- Make sure final answers are based on verified data.
+
+---
+
+\u2705 Example Function calls:
+
+- FUNCTION_CALL: { "tool_name": "strings_to_chars_to_int", "tool_input":{ "string": "BHARAT" } }
+- FUNCTION_CALL: { "tool_name": "int_list_to_exponential_sum", "tool_input":{ "int_list": [73, 78, 68, 73, 65] } }
+- FUNCTION_CALL: { "tool_name": "find_first_fibonacci_numbers", "tool_input":{ "n" : 4 } }
+- FUNCTION_CALL: { "tool_name": "calculate_cubes", "tool_input":{ "numbers" : [0 ,1 ,1 ,2] } }
+- FUNCTION_CALL: { "tool_name": "calculate_sum", "tool_input":{ "numbers": [0,1,1,8] } }
+- FUNCTION_CALL: { "tool_name": "open_paint", "tool_input":{} }
+- FUNCTION_CALL: { "tool_name": "draw_rectangle", "tool_input":{ "x1": 200, "y1": 200, "x2": 400, "y2": 400 } }
+- FUNCTION_CALL: { "tool_name": "add_text_in_paint", "tool_input":{ "text": "24440777.89" } }
+- FUNCTION_CALL: { "tool_name": "send_email", "tool_input":{ "to_email": "bhole.atul@gmail.com", "subject": "some_valid_subject", "body": "24440777.89" } }
+
+---
+
+\u2705 Example Session:
+
+FUNCTION_CALL: { "tool_name": "find_first_fibonacci_numbers", "tool_input":{ "n" : 4 } }
+[waits for tool response: [0 ,1 ,1 ,2 ]]  
+FUNCTION_CALL: { "tool_name": "calculate_cubes", "tool_input":{ "numbers" : [0 ,1 ,1 ,2 ] } }
+[waits for tool response: [0,1,1,8]]
+FUNCTION_CALL: { "tool_name": "calculate_sum", "tool_input":{ "numbers" : [0,1,1,8] } }
+[waits for tool response: [10]]
+FUNCTION_CALL: { "tool_name": "open_paint", "tool_input":{} }
+FUNCTION_CALL: { "tool_name": "draw_rectangle", "tool_input":{ "x1": 200, "y1": 200, "x2": 400, "y2": 400 } }
+FUNCTION_CALL: { "tool_name": "add_text_in_paint", "tool_input":{ "text": "text-in-the-paint" } }
+FUNCTION_CALL: { "tool_name": "send_email", "tool_input":{ "to_email": "bhole.atul@gmail.com", "subject": "some_valid_subject", "body": "10" } }
+FINAL_ANSWER: 245398.23
+
+
+2025-04-13 16:09:14,527 - INFO - 
+Starting iteration loop...
+2025-04-13 16:09:14,527 - INFO - 
+--- Iteration 1 ---
+2025-04-13 16:09:14,527 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:14,528 - INFO - Starting LLM generation...
+2025-04-13 16:09:14,537 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:14,544 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-13 16:09:14,570 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F934D54590>
+2025-04-13 16:09:14,571 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F934CB8B00> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-13 16:09:14,653 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F934D14CD0>
+2025-04-13 16:09:14,654 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:14,655 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:14,655 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:14,655 - DEBUG - send_request_body.complete
+2025-04-13 16:09:14,656 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:17,929 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:17 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=3267'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:17,930 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:17,930 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:17,931 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:17,932 - DEBUG - response_closed.started
+2025-04-13 16:09:17,932 - DEBUG - response_closed.complete
+2025-04-13 16:09:17,933 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:17,934 - INFO - LLM generation completed
+2025-04-13 16:09:17,934 - INFO - LLM Response: Okay, I understand the task. Here's the plan:
+
+1.  **Find the first 10 Fibonacci numbers:** Use the `find_first_fibonacci_numbers` tool with `n=10`.
+2.  **Calculate the cubes:** Use the `calculate_cubes` tool with the list from step 1.
+3.  **Calculate the sum:** Use the `calculate_sum` tool with the list from step 2.
+4.  **Open Paint:** Use the `open_paint` tool.
+5.  **Draw a rectangle:** Use the `draw_rectangle` tool with the specified coordinates.
+6.  **Add Text:** Use the `add_text_in_paint` tool to add the sum from step 3 to the canvas.
+7.  **Send Email:** Use the `send_email` tool to send an email with the sum from step 3 and steps taken.
+8.  **Final Answer:** Return the calculated sum from step 3.
+
+Now, let's start:
+**Step 1: Find the first 10 Fibonacci numbers.**
+[Reasoning Type: Lookup]
+```
+FUNCTION_CALL: {"tool_name": "find_first_fibonacci_numbers", "tool_input": {"n": 10}}
+```
+2025-04-13 16:09:17,935 - DEBUG - Function name: find_first_fibonacci_numbers
+2025-04-13 16:09:17,935 - DEBUG - Parameters: {'n': 10}
+2025-04-13 16:09:17,935 - DEBUG - Found tool: find_first_fibonacci_numbers
+2025-04-13 16:09:17,935 - DEBUG - Tool schema: {'$defs': {'FibonacciInput': {'properties': {'n': {'description': 'The number of Fibonacci numbers to generate.', 'title': 'N', 'type': 'integer'}}, 'required': ['n'], 'title': 'FibonacciInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/FibonacciInput'}}, 'required': ['input_data'], 'title': 'find_first_fibonacci_numbersArguments', 'type': 'object'}
+2025-04-13 16:09:17,935 - DEBUG - Final arguments: {'n': 10}
+2025-04-13 16:09:17,936 - DEBUG - Calling tool find_first_fibonacci_numbers
+2025-04-13 16:09:17,946 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"fibonacci_numbers": [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]}', annotations=None)] isError=False
+2025-04-13 16:09:17,946 - DEBUG - Result has content attribute
+2025-04-13 16:09:17,946 - INFO - DEBUG: Final iteration result: ['{"fibonacci_numbers": [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]}']
+2025-04-13 16:09:17,946 - INFO - 
+--- Iteration 2 ---
+2025-04-13 16:09:17,947 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:17,947 - INFO - Starting LLM generation...
+2025-04-13 16:09:17,947 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:17,952 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:17,953 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:17,953 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:17,953 - DEBUG - send_request_body.complete
+2025-04-13 16:09:17,953 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:19,315 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:18 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1037'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:19,316 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:19,316 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:19,317 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:19,318 - DEBUG - response_closed.started
+2025-04-13 16:09:19,318 - DEBUG - response_closed.complete
+2025-04-13 16:09:19,319 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:19,319 - INFO - LLM generation completed
+2025-04-13 16:09:19,320 - INFO - LLM Response: Okay, I have the first 10 Fibonacci numbers. Now I need to calculate the cubes of these numbers.
+[Reasoning Type: Arithmetic]
+FUNCTION_CALL: {"tool_name": "calculate_cubes", "tool_input": {"numbers": [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]}}
+2025-04-13 16:09:19,320 - DEBUG - Function name: calculate_cubes
+2025-04-13 16:09:19,320 - DEBUG - Parameters: {'numbers': [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]}
+2025-04-13 16:09:19,320 - DEBUG - Found tool: calculate_cubes
+2025-04-13 16:09:19,320 - DEBUG - Tool schema: {'$defs': {'CubeInput': {'properties': {'numbers': {'description': 'The list of numbers to calculate cubes for.', 'items': {'type': 'integer'}, 'title': 'Numbers', 'type': 'array'}}, 'required': ['numbers'], 'title': 'CubeInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/CubeInput'}}, 'required': ['input_data'], 'title': 'calculate_cubesArguments', 'type': 'object'}
+2025-04-13 16:09:19,321 - DEBUG - Final arguments: {'numbers': [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]}
+2025-04-13 16:09:19,321 - DEBUG - Calling tool calculate_cubes
+2025-04-13 16:09:19,330 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"cubes": [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]}', annotations=None)] isError=False
+2025-04-13 16:09:19,330 - DEBUG - Result has content attribute
+2025-04-13 16:09:19,330 - INFO - DEBUG: Final iteration result: ['{"cubes": [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]}']
+2025-04-13 16:09:19,331 - INFO - 
+--- Iteration 3 ---
+2025-04-13 16:09:19,331 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:19,331 - INFO - Starting LLM generation...
+2025-04-13 16:09:19,331 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:19,335 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:19,336 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:19,336 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:19,337 - DEBUG - send_request_body.complete
+2025-04-13 16:09:19,337 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:20,746 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:20 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1403'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:20,747 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:20,747 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:20,748 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:20,748 - DEBUG - response_closed.started
+2025-04-13 16:09:20,748 - DEBUG - response_closed.complete
+2025-04-13 16:09:20,750 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:20,750 - INFO - LLM generation completed
+2025-04-13 16:09:20,750 - INFO - LLM Response: Okay, I have the cubes of the first 10 Fibonacci numbers. Now I need to calculate the sum of these cubes.
+
+FUNCTION_CALL: {"tool_name": "calculate_sum", "tool_input": {"numbers": [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]}}
+2025-04-13 16:09:20,751 - DEBUG - Function name: calculate_sum
+2025-04-13 16:09:20,751 - DEBUG - Parameters: {'numbers': [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]}
+2025-04-13 16:09:20,751 - DEBUG - Found tool: calculate_sum
+2025-04-13 16:09:20,751 - DEBUG - Tool schema: {'$defs': {'SumInput': {'properties': {'numbers': {'description': 'The list of numbers to calculate the sum for.', 'items': {'type': 'integer'}, 'title': 'Numbers', 'type': 'array'}}, 'required': ['numbers'], 'title': 'SumInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/SumInput'}}, 'required': ['input_data'], 'title': 'calculate_sumArguments', 'type': 'object'}
+2025-04-13 16:09:20,751 - DEBUG - Final arguments: {'numbers': [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]}
+2025-04-13 16:09:20,752 - DEBUG - Calling tool calculate_sum
+2025-04-13 16:09:20,760 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"total": 217811}', annotations=None)] isError=False
+2025-04-13 16:09:20,761 - DEBUG - Result has content attribute
+2025-04-13 16:09:20,761 - INFO - DEBUG: Final iteration result: ['{"total": 217811}']
+2025-04-13 16:09:20,761 - INFO - 
+--- Iteration 4 ---
+2025-04-13 16:09:20,761 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:20,761 - INFO - Starting LLM generation...
+2025-04-13 16:09:20,762 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:20,766 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:20,767 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:20,767 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:20,767 - DEBUG - send_request_body.complete
+2025-04-13 16:09:20,768 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:23,251 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:22 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=2479'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:23,252 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:23,253 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:23,253 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:23,254 - DEBUG - response_closed.started
+2025-04-13 16:09:23,254 - DEBUG - response_closed.complete
+2025-04-13 16:09:23,255 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:23,256 - INFO - LLM generation completed
+2025-04-13 16:09:23,256 - INFO - LLM Response: Okay, I have calculated the sum of the cubes of the first 10 Fibonacci numbers. Now I need to open Microsoft Paint.
+REASONING: [Tool-Use]
+
+FUNCTION_CALL: {"tool_name": "open_paint", "tool_input": {}}
+2025-04-13 16:09:23,256 - DEBUG - Function name: open_paint
+2025-04-13 16:09:23,256 - DEBUG - Parameters: {}
+2025-04-13 16:09:23,256 - DEBUG - Found tool: open_paint
+2025-04-13 16:09:23,257 - DEBUG - Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-13 16:09:23,257 - DEBUG - Final arguments: {}
+2025-04-13 16:09:23,257 - DEBUG - Calling tool open_paint
+2025-04-13 16:09:27,263 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"message": "Microsoft Paint has been successfully launched, brought to focus, and the canvas has been reset."}', annotations=None)] isError=False
+2025-04-13 16:09:27,263 - DEBUG - Result has content attribute
+2025-04-13 16:09:27,263 - INFO - DEBUG: Final iteration result: ['{"message": "Microsoft Paint has been successfully launched, brought to focus, and the canvas has been reset."}']
+2025-04-13 16:09:27,263 - INFO - 
+--- Iteration 5 ---
+2025-04-13 16:09:27,264 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:27,264 - INFO - Starting LLM generation...
+2025-04-13 16:09:27,264 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:27,269 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:27,269 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:27,269 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:27,270 - DEBUG - send_request_body.complete
+2025-04-13 16:09:27,270 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:28,402 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:27 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1126'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:28,403 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:28,403 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:28,405 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:28,405 - DEBUG - response_closed.started
+2025-04-13 16:09:28,405 - DEBUG - response_closed.complete
+2025-04-13 16:09:28,406 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:28,407 - INFO - LLM generation completed
+2025-04-13 16:09:28,407 - INFO - LLM Response: Okay, I have opened Microsoft Paint. Now I need to draw a rectangle from (200, 200) to (500, 400).
+
+FUNCTION_CALL: {"tool_name": "draw_rectangle", "tool_input": {"x1": 200, "y1": 200, "x2": 500, "y2": 400}}
+2025-04-13 16:09:28,407 - DEBUG - Function name: draw_rectangle
+2025-04-13 16:09:28,408 - DEBUG - Parameters: {'x1': 200, 'y1': 200, 'x2': 500, 'y2': 400}
+2025-04-13 16:09:28,408 - DEBUG - Found tool: draw_rectangle
+2025-04-13 16:09:28,408 - DEBUG - Tool schema: {'$defs': {'RectangleInput': {'properties': {'x1': {'description': 'The x-coordinate of the starting point.', 'title': 'X1', 'type': 'integer'}, 'y1': {'description': 'The y-coordinate of the starting point.', 'title': 'Y1', 'type': 'integer'}, 'x2': {'description': 'The x-coordinate of the ending point.', 'title': 'X2', 'type': 'integer'}, 'y2': {'description': 'The y-coordinate of the ending point.', 'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'RectangleInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/RectangleInput'}}, 'required': ['input_data'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-13 16:09:28,408 - DEBUG - Final arguments: {'x1': 200, 'y1': 200, 'x2': 500, 'y2': 400}
+2025-04-13 16:09:28,408 - DEBUG - Calling tool draw_rectangle
+2025-04-13 16:09:30,022 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"message": "A rectangle has been successfully drawn from (200, 200) to (500, 400)."}', annotations=None)] isError=False
+2025-04-13 16:09:30,022 - DEBUG - Result has content attribute
+2025-04-13 16:09:30,023 - INFO - DEBUG: Final iteration result: ['{"message": "A rectangle has been successfully drawn from (200, 200) to (500, 400)."}']
+2025-04-13 16:09:30,023 - INFO - 
+--- Iteration 6 ---
+2025-04-13 16:09:30,023 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:30,023 - INFO - Starting LLM generation...
+2025-04-13 16:09:30,024 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:30,028 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:30,029 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:30,029 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:30,029 - DEBUG - send_request_body.complete
+2025-04-13 16:09:30,030 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:30,946 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:30 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=911'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:30,947 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:30,947 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:30,948 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:30,948 - DEBUG - response_closed.started
+2025-04-13 16:09:30,949 - DEBUG - response_closed.complete
+2025-04-13 16:09:30,950 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:30,951 - INFO - LLM generation completed
+2025-04-13 16:09:30,951 - INFO - LLM Response: ```tool_code
+FUNCTION_CALL: {"tool_name": "add_text_in_paint", "tool_input": {"text": "Final Answer :-: 217811"}}
+```
+2025-04-13 16:09:30,951 - DEBUG - Function name: add_text_in_paint
+2025-04-13 16:09:30,951 - DEBUG - Parameters: {'text': 'Final Answer :-: 217811'}
+2025-04-13 16:09:30,951 - DEBUG - Found tool: add_text_in_paint
+2025-04-13 16:09:30,951 - DEBUG - Tool schema: {'$defs': {'TextInput': {'properties': {'text': {'description': 'The text to be added to the canvas.', 'title': 'Text', 'type': 'string'}}, 'required': ['text'], 'title': 'TextInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/TextInput'}}, 'required': ['input_data'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-13 16:09:30,952 - DEBUG - Final arguments: {'text': 'Final Answer :-: 217811'}
+2025-04-13 16:09:30,952 - DEBUG - Calling tool add_text_in_paint
+2025-04-13 16:09:34,228 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"message": "The text \'Final Answer :-: 217811\' has been successfully added to the canvas."}', annotations=None)] isError=False
+2025-04-13 16:09:34,228 - DEBUG - Result has content attribute
+2025-04-13 16:09:34,228 - INFO - DEBUG: Final iteration result: ['{"message": "The text \'Final Answer :-: 217811\' has been successfully added to the canvas."}']
+2025-04-13 16:09:34,228 - INFO - 
+--- Iteration 7 ---
+2025-04-13 16:09:34,228 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:34,228 - INFO - Starting LLM generation...
+2025-04-13 16:09:34,228 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:34,234 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:34,235 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:34,235 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:34,236 - DEBUG - send_request_body.complete
+2025-04-13 16:09:34,236 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:35,818 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:35 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1577'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:35,819 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:35,819 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:35,820 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:35,820 - DEBUG - response_closed.started
+2025-04-13 16:09:35,821 - DEBUG - response_closed.complete
+2025-04-13 16:09:35,822 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:35,822 - INFO - LLM generation completed
+2025-04-13 16:09:35,823 - INFO - LLM Response: ```tool_code
+FUNCTION_CALL: {"tool_name": "send_email", "tool_input": {"to_email": "bhole.atul@gmail.com", "subject": "Fibonacci Cubes Sum", "body": "The sum of the cubes of the first 10 Fibonacci numbers is 217811.\n\nSteps taken:\n1. Calculated the first 10 Fibonacci numbers: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n2. Calculated the cubes of these numbers: [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]\n3. Summed the cubes: 217811"}}
+```
+2025-04-13 16:09:35,823 - DEBUG - Function name: send_email
+2025-04-13 16:09:35,823 - DEBUG - Parameters: {'to_email': 'bhole.atul@gmail.com', 'subject': 'Fibonacci Cubes Sum', 'body': 'The sum of the cubes of the first 10 Fibonacci numbers is 217811.\n\nSteps taken:\n1. Calculated the first 10 Fibonacci numbers: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n2. Calculated the cubes of these numbers: [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]\n3. Summed the cubes: 217811'}
+2025-04-13 16:09:35,823 - DEBUG - Found tool: send_email
+2025-04-13 16:09:35,823 - DEBUG - Tool schema: {'$defs': {'EmailInput': {'properties': {'to_email': {'description': 'The recipient email address.', 'title': 'To Email', 'type': 'string'}, 'subject': {'description': 'The subject of the email.', 'title': 'Subject', 'type': 'string'}, 'body': {'description': 'The content of the email.', 'title': 'Body', 'type': 'string'}}, 'required': ['to_email', 'subject', 'body'], 'title': 'EmailInput', 'type': 'object'}}, 'properties': {'input_data': {'$ref': '#/$defs/EmailInput'}}, 'required': ['input_data'], 'title': 'send_emailArguments', 'type': 'object'}
+2025-04-13 16:09:35,824 - DEBUG - Final arguments: {'to_email': 'bhole.atul@gmail.com', 'subject': 'Fibonacci Cubes Sum', 'body': 'The sum of the cubes of the first 10 Fibonacci numbers is 217811.\n\nSteps taken:\n1. Calculated the first 10 Fibonacci numbers: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n2. Calculated the cubes of these numbers: [1, 1, 8, 27, 125, 512, 2197, 9261, 39304, 166375]\n3. Summed the cubes: 217811'}
+2025-04-13 16:09:35,824 - DEBUG - Calling tool send_email
+2025-04-13 16:09:38,759 - DEBUG - Raw result: meta=None content=[TextContent(type='text', text='{"message": "Email sent successfully to bhole.atul@gmail.com"}', annotations=None)] isError=False
+2025-04-13 16:09:38,759 - DEBUG - Result has content attribute
+2025-04-13 16:09:38,759 - INFO - DEBUG: Final iteration result: ['{"message": "Email sent successfully to bhole.atul@gmail.com"}']
+2025-04-13 16:09:38,759 - INFO - 
+--- Iteration 8 ---
+2025-04-13 16:09:38,759 - INFO - Preparing to generate LLM response...
+2025-04-13 16:09:38,760 - INFO - Starting LLM generation...
+2025-04-13 16:09:38,760 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 16:09:38,763 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:38,763 - DEBUG - send_request_headers.complete
+2025-04-13 16:09:38,764 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-13 16:09:38,764 - DEBUG - send_request_body.complete
+2025-04-13 16:09:38,764 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-13 16:09:39,503 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 13 Apr 2025 10:39:39 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=733'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-13 16:09:39,505 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-13 16:09:39,506 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-13 16:09:39,507 - DEBUG - receive_response_body.complete
+2025-04-13 16:09:39,508 - DEBUG - response_closed.started
+2025-04-13 16:09:39,508 - DEBUG - response_closed.complete
+2025-04-13 16:09:39,509 - INFO - AFC remote call 1 is done.
+2025-04-13 16:09:39,510 - INFO - LLM generation completed
+2025-04-13 16:09:39,510 - INFO - LLM Response: FINAL_ANSWER: 217811
+2025-04-13 16:09:39,510 - INFO - 
+=== Agent Execution Complete ===
+2025-04-13 16:09:39,750 - DEBUG - close.started
+2025-04-13 16:09:39,763 - DEBUG - close.complete
