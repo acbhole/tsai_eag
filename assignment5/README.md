@@ -356,7 +356,7 @@ Inspired from - https://modelcontextprotocol.io/docs/concepts/tools#tool-definit
 ```
 ### 4: LLM Response json(ish)
 
-```json
+```jsonp
 
 FUNCTION_CALL: {"tool_name": "find_first_fibonacci_numbers", "tool_input": {"n": 10}}
 
