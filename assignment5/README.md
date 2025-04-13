@@ -9,9 +9,7 @@ Compute the sum of the cubes of the first 10 Fibonacci numbers. Add this result 
 ### 1: System Prompt qualified by Prompt of prompts.
 ```
 https://chatgpt.com/share/67fba172-adc4-8008-bc27-7978d20a1135
-
-
-![alt text](chat_gpt.png "Title")
+![chat_gpt](https://github.com/user-attachments/assets/50ea48f3-175a-4397-af62-acd5e70c6b38)
 
 ```
 
