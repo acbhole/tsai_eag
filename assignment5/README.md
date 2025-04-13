@@ -275,7 +275,7 @@ You are an AI agent that solves tasks iteratively using tools. You must reason s
 
 ✅ Example Function calls:
 
-```json
+```jsonc
 - FUNCTION_CALL: { "tool_name": "strings_to_chars_to_int", "tool_input":{ "string": "BHARAT" } }
 - FUNCTION_CALL: { "tool_name": "int_list_to_exponential_sum", "tool_input":{ "int_list": [73, 78, 68, 73, 65] } }
 - FUNCTION_CALL: { "tool_name": "find_first_fibonacci_numbers", "tool_input":{ "n" : 4 } }
@@ -289,13 +289,13 @@ You are an AI agent that solves tasks iteratively using tools. You must reason s
 ---
 
 ✅ Example Session:
-```json
+```jsonc
 - FUNCTION_CALL: { "tool_name": "find_first_fibonacci_numbers", "tool_input":{ "n" : 4 } }
-- [waits for tool response: [0 ,1 ,1 ,2 ]]  
+- waits for tool response: [0 ,1 ,1 ,2 ]  
 - FUNCTION_CALL: { "tool_name": "calculate_cubes", "tool_input":{ "numbers" : [0 ,1 ,1 ,2 ] } }
-- [waits for tool response: [0,1,1,8]]
+- waits for tool response: [0,1,1,8]
 - FUNCTION_CALL: { "tool_name": "calculate_sum", "tool_input":{ "numbers" : [0,1,1,8] } }
-- [waits for tool response: [10]]
+- waits for tool response: [10]
 - FUNCTION_CALL: { "tool_name": "open_paint", "tool_input":{} }
 - FUNCTION_CALL: { "tool_name": "draw_rectangle", "tool_input":{ "x1": 200, "y1": 200, "x2": 400, "y2": 400 } }
 - FUNCTION_CALL: { "tool_name": "add_text_in_paint", "tool_input":{ "text": "text-in-the-paint" } }
@@ -321,8 +321,8 @@ Please perform the following steps in sequence:
   - `FUNCTION_CALL:` or
   - `FINAL_ANSWER:`
 - For tool usage, format the function call like this:
-  ```json
-  FUNCTION_CALL: {{ "tool_name": "function_name", "tool_input":{{ "<parameter_name>": "<parameter_value>", ... }}}}
+  ```jsonc
+  FUNCTION_CALL: { "tool_name": "function_name", "tool_input":{ "<parameter_name>": "<parameter_value>", ... }}
   ```
 - The final step must return the completed answer like this:
   ```plaintext
@@ -337,9 +337,9 @@ Please perform the following steps in sequence:
 - Do not guess or hallucinate any values—only use verified tool outputs.
 - Do not miss any instruction. Always aim to complete the task as fully as possible using available tools, even with partial results.
 #### Example Output:
-```json
-FUNCTION_CALL: {{ "tool_name": "find_first_fibonacci_numbers", "tool_input":{{ "n" : 4 }} }}
-FUNCTION_CALL: {{ "tool_name": "calculate_cubes", "tool_input":{{ "numbers" : [0 ,1 ,1 ,2] }} }}
+```jsonc
+FUNCTION_CALL: { "tool_name": "find_first_fibonacci_numbers", "tool_input":{ "n" : 4 } }
+FUNCTION_CALL: { "tool_name": "calculate_cubes", "tool_input":{ "numbers" : [0 ,1 ,1 ,2] } }
 ```
 After receiving the response, move to the next logical step.
 
@@ -574,7 +574,7 @@ Inspired from - https://modelcontextprotocol.io/docs/concepts/tools#tool-definit
 
 ### 4: LLM Response json(ish)
 
-```json
+```jsonc
 
 FUNCTION_CALL: {"tool_name": "find_first_fibonacci_numbers", "tool_input": {"n": 10}}
 
