@@ -52,62 +52,6 @@ class Tool(BaseModel):
     type: str
     function: Function
 
-
-def generate_user_prompt():
-    return """
-You are an AI agent that performs tasks step-by-step using external tools. Follow each instruction in order, using exactly one tool function call per response, and track your reasoning process internally.
-Task Instructions:
-Please perform the following steps in sequence:
-[Reasoning Type: Lookup] Find first [n=5] fibonacci_numbers using the appropriate tool.
-[Reasoning Type: Arithmetic] Use the list from step 1 to compute the [squares or cubes] of the first [n] fibonacci numbers.
-[Reasoning Type: Arithmetic] Compute the sum of the [squares or cubes] from step 2.
-[Reasoning Type: Tool-Use] Open Microsoft Paint.
-[Reasoning Type: Tool-Use] Draw a rectangle using coordinates (200, 200) to (500, 400).
-[Reasoning Type: Communication] Add the text Final Answer [squares or cubes] ::: [sum] to the Paint canvas using the result from step 3.
-[Reasoning Type: Communication] Send an email to bhole.atul@gmail.com or message via telegram to chat_id "1016269334" with an appropriate subject based on the user preference, and include the sum from step 3 in the message body along with all the steps taken.
-Output Format Rules:
-For tool usage, output JSON like:
-{"reasoning": "<reasoning>", "action": {"type": "function_call", "tool_name": "<tool_name>", "tool_input": {"<param>": "<value>"}}}
-The final step must return the completed answer like:
-{"reasoning": "<reasoning>", "action": {"type": "final_answer", "answer": <value>}}
-"""
-
-
-def generate_system_prompt(tools_description, preferences=None):
-    # tools_desc_str = "\n".join(
-    #     json.loads(desc)["function"]["name"]
-    #     + ": "
-    #     + json.loads(desc)["function"]["description"]
-    #     for desc in tools_description
-    # )
-
-    logger.info("User Preferences:")
-    logger.info(preferences)
-
-    logger.info("Tools Description:")
-    logger.info(tools_description)
-    return f"""You are an AI agent that solves tasks iteratively using tools. Respond in JSON format with 'reasoning' and 'action' keys. Use one tool per response unless it's the final answer.
----
-User Preferences:
-{preferences}
----
-Available Tools:
-{tools_description}
----
-Output Format:
-- For tool calls: {{"reasoning": "<reasoning>", "action": {{"type": "function_call", "tool_name": "<tool_name>", "tool_input": {{"param": "value"}}}}}}
-- For final answer: {{"reasoning": "<reasoning>", "action": {{"type": "final_answer", "answer": <value>}}}}
----
-Reasoning Instructions:
-- Reason step-by-step internally.
-- Verify intermediate results before proceeding.
-- Store and reuse tool outputs as needed.
-- Handle errors by continuing with available data.
-- You also need to take into account user preferences.
-
-"""
-
-
 def generate_tool_descriptions(tools):
     new_tools_description = []
     for tool in tools:
@@ -215,8 +159,6 @@ async def main():
             # Prepare tools and prompt
             tools_result = await session.list_tools()
             tools_description = generate_tool_descriptions(tools_result.tools)
-            # system_prompt = generate_system_prompt(tools_description, memory.preferences)
-            # query = generate_user_prompt()
             logger.info("Tools Description:")
             logger.info(tools_description)
 
