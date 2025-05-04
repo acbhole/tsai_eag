@@ -1,0 +1,182 @@
+.webrag-gradient-text {
+  font-size: 2em; /* Adjust size as needed */
+  font-weight: bold;
+  background: linear-gradient(to right, #b5783f, #9C27B0); /* Deep Space Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Important for clip and fill to work correctly */
+  line-height: 1.3;
+}
+
+
+/* Example Usage */
+/*
+<h1 class="webrag-animated-gradient-color-text">WebRAG</h1>
+*/
+
+.ui.container#rag-popup {
+  width: 600px  !important  ;
+  margin: 10px auto;
+  background: #F0F0F0; /* Light Gray */
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.ui.inverted.blue.segment {
+  background: #424242 !important; /* Dark Gray */
+  border-radius: 8px 8px 0 0 !important;
+  font-family: 'Inter', sans-serif !important;
+  padding: 0.8em 1em !important;
+  color: #E0E0E0 !important; /* Light Gray - for text in header */
+}
+
+#backend-status {
+  margin-right: 0.5em;
+}
+
+#backend-status.online {
+  color: #2ECC71 !important; /* Emerald Green (Accent) */
+}
+
+#backend-status.offline {
+  color: #FF0000 !important; /* Classic Red */
+}
+
+#ask-input {
+  resize: vertical;
+  min-height: 36px;
+  max-height: 120px;
+  border-radius: 4px !important;
+  background: #FFFFFF !important; /* White */
+  color: #424242 !important; /* Dark Gray */
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  border: 1px solid #BDBDBD; /* Medium Gray - for input border */
+  flex-grow: 1;
+  margin: 0 0.5em;
+}
+
+#results {
+  min-height: 60px;
+  white-space: pre-line;
+  line-height: 1.6;
+  word-break: break-word;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  background: #FFFFFF !important; /* White */
+  color: #424242 !important; /* Dark Gray */
+  border: 1px solid #BDBDBD; /* Medium Gray - for results border */
+}
+
+.ui.tab.segment {
+  background: #FFFFFF !important; /* White */
+  color: #424242 !important; /* Dark Gray */
+  font-family: 'Inter', sans-serif !important;
+  padding: 0.8em !important;
+  border: 1px solid #BDBDBD; /* Medium Gray - for tab segment border */
+}
+
+.ui.menu .item {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500;
+  color: #BDBDBD; /* Medium Gray */
+}
+
+.ui.menu .active.item {
+  background: #3F51B5 !important; /* #2ECC71 Emerald Green (Accent) */
+  color: #FFFFFF !important; /* White */
+}
+
+#indexed-pages-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4em 0;
+}
+
+
+
+#indexed-pages-list .item a {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9em;
+  color: #1E90FF; /* Electric Blue (Alternative Accent) */
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500;
+}
+
+#indexed-pages-list .item .button {
+  margin-left: 0.5em;
+  color: #FF0000 !important; /* Classic Red */
+}
+
+.ui.header, .ui.button, .ui.message, .ui.form .field label {
+  font-family: 'Inter', sans-serif !important;
+  color: #424242; /* Dark Gray */
+}
+
+.ui.header {
+  font-weight: 600;
+  margin: 0.5em 0 !important;
+}
+
+.ui.button {
+  font-weight: 500;
+  background-color: #BDBDBD; /* Medium Gray */
+  color: #424242; /* Dark Gray */
+  border: none; /* Remove default button border */
+}
+
+.ui.fitted.segment {
+  padding: 0.8em !important;
+  background-color: #F0F0F0; /* Light Gray */
+  color: #424242; /* Dark Gray */
+  border: 1px solid #BDBDBD; /* Medium Gray - for segment border */
+}
+
+.ui.message {
+  margin: 0 !important;
+  background-color: #F0F0F0; /* Light Gray */
+  color: #424242; /* Dark Gray */
+  border: 1px solid #BDBDBD; /* Medium Gray - for message border */
+}
+
+.ui.form .field {
+  margin-bottom: 0.8em !important;
+}
+
+.ui.buttons .button, .ui.button {
+  padding: 0.6em 1em !important;
+}
+
+.ui.button:focus, .ui.button:hover {
+  outline: 2px solid #3F51B5 !important; /* Emerald Green (Accent) */
+  background-color: #E0E0E0 !important; /* Lighter Gray on hover/focus */
+}
+
+.ui.action.input {
+  display: flex;
+  align-items: center;
+}
+
+#log-page-btn.ui.icon.button,
+#summarize-btn.ui.icon.button {
+  padding: 0.6em !important;
+  background-color: #BDBDBD; /* Medium Gray */
+  color: #424242; /* Dark Gray */
+}
+
+#log-page-btn.ui.icon.button:hover,
+#log-page-btn.ui.icon.button:focus,
+#summarize-btn.ui.icon.button:hover,
+#summarize-btn.ui.icon.button:focus {
+  background-color: #E0E0E0 !important; /* Lighter Gray on hover/focus */
+  outline: 2px solid #3F51B5 !important; /* Emerald Green (Accent) */
+}
+
+#ask-btn.ui.button {
+  padding: 0.6em 0.8em !important; /* Reduced padding for narrower button */
+}

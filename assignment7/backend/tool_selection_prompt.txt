@@ -1,0 +1,1 @@
+As an AI agent operating independently, and given the subsequent inventory of accessible tools along with their descriptions: {tools_json}, and the user's request: {user_input}, determine the most appropriate tool to employ. Respond solely with the name of the selected tool as a simple text string.

@@ -1,0 +1,5 @@
+Please condense the provided content into an easily understandable and approachable summary, presented in JSON format. 
+Ensure that you do not directly replicate the source text; instead, use your own wording. 
+The JSON output should adhere strictly to the following structure: 
+{{"answer": "<summary>", "found_answer": true, "source_urls": {urls_json}}}
+CONTEXT:{markdown}

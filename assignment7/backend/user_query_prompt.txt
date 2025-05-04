@@ -1,0 +1,4 @@
+You are a helpful assistant. Given the following CONTEXT from a web page, answer user's QUERY using your own phrasing, providing a comprehensive, thorough, and beneficial response. Ensure that you do NOT reproduce the context word-for-word. Always format your response ONLY as a JSON object (without any additional explanations, markdown formatting, or commentary):
+{{"answer": "<your detailed answer here>", "found_answer": true/false, "source_urls": {{urls_json}}}}
+CONTEXT: {markdown}
+QUESTION: {query}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebRAG</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="ui container" id="rag-popup">
+    <div class="ui inverted blue segment" style="display: flex; justify-content: space-between; align-items: center;">
+      <h4 class="ui header inverted" id="rag-title">
+        <span class="webrag-gradient-text">WebRAG</span>
+      </h4>
+      <i class="circle icon" id="backend-status" aria-hidden="true"></i>
+    </div>
+    <div class="ui top attached tabular menu">
+      <a class="item active" data-tab="main" aria-label="Main interface">Main</a>
+      <a class="item" data-tab="indexed" aria-label="Indexed pages">Indexed Pages</a>
+      <a class="item" data-tab="stats" aria-label="Stats">Stats</a>
+      <a class="item" data-tab="settings" aria-label="Settings">Settings</a>
+    </div>
+    <div class="ui bottom attached tab segment active" data-tab="main">
+      <div class="ui grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui form">
+              <div class="ui action input fluid">
+                <button class="ui icon button" id="log-page-btn" aria-label="Log current page" title="Index Page">
+                  <i class="file alternate icon"></i>
+                </button>
+                <button class="ui icon button" id="summarize-btn" aria-label="Summarize current page" title="Summarize Page">
+                  <i class="compress icon"></i>
+                </button>
+                <textarea id="ask-input" placeholder="Have a question about this page?" rows="1" aria-label="Enter your question"></textarea>
+                <button class="ui icon button" id="ask-btn" aria-label="Submit question" title="Ask">
+                  <!-- <div class="visible content">Ask</div><div class="hidden content"> -->
+                    <i class="question circle icon"></i>
+                  <!-- </div> -->
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" id="result-section">
+            <h4 class="ui header"><i class="info circle icon" aria-hidden="true"></i> Results</h4>
+            <div class="ui message" id="results"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="indexed">
+      <div class="ui relaxed divided list" id="indexed-pages-list"></div>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="stats">
+      <h4 class="ui header"><i class="chart bar icon" aria-hidden="true"></i> Stats for nerds</h4>
+      <div class="ui fitted segment" id="stats-section">
+        <div id="stats-content"></div>
+      </div>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="settings">
+      <form class="ui form" id="options-form">
+        <div class="field">
+          <label for="backend-url">Backend API Base URL:</label>
+          <div class="ui input">
+            <input type="text" id="backend-url" name="backend-url" placeholder="http://127.0.0.1:8000" aria-label="Enter backend API base URL" />
+          </div>
+        </div>
+        <button class="ui labeled icon animated button" type="submit" aria-label="Save settings">
+          <div class="visible content">Save</div>
+          <div class="hidden content"><i class="save icon"></i></div>
+        </button>
+      </form>
+      <div class="ui message hidden" id="save-status"></div>
+    </div>
+  </div>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/semantic.min.js"></script>
+  <script src="popup.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a72fc05ee2bfa7',t:'MTc0NjM1MzE5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
