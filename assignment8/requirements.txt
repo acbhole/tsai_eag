@@ -1,0 +1,13 @@
+asyncio
+python-dotenv
+pydantic
+google-api-python-client
+google-auth
+google-auth-oauthlib
+oauth2client
+gspread
+requests
+python-telegram-bot
+fastapi
+sse-starlette
+genai
